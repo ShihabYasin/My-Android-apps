@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">RESTART</string>
+    <string name="action_settings">Settings</string>
+    <string name="device_admin_not_enabled">Go to Settings  to Enable</string>
+    <string name="admin_receiver_status_enabled">Status ON</string>
+    <string name="admin_receiver_status_disabled">Status Disabled</string>
+    <string name="device_admin_description">Turns the screen off and locks your device with a single touch.</string>
+    <string name="hello_world">helloWorld</string>
+
+</resources>
+

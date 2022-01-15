@@ -1,0 +1,125 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#d7f9f9"
+    tools:context="com.screenoff.shihab.bookamrain.FullscreenActivity">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+    <com.screenoff.shihab.bookamrain.TouchImageView
+        android:id="@+id/imageView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/page0"
+        android:layout_above="@+id/btnChangeImage"
+        android:keepScreenOn="true" />
+
+
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <RelativeLayout
+            android:id="@+id/fullscreen_content_controls"
+            style="?metaButtonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="591dp"
+            android:layout_gravity="bottom|center_horizontal"
+            android:background="@color/black_overlay"
+            android:orientation="horizontal"
+            tools:ignore="UselessParent">
+
+
+            <Button
+                android:id="@+id/btnChangeImage"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:background="@layout/buttonshape"
+                android:shadowColor="#A86A99"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="5"
+                android:text="Next"
+                android:textColor="#75FFA8" />
+
+
+            <Button
+                android:id="@+id/btnPrevImage"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:background="@layout/buttonshape"
+                android:shadowColor="#A86A99"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="5"
+                android:text="Prev"
+                android:textColor="#75FFA8" />
+
+
+            <TextView
+                android:id="@+id/textViewPageno"
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:layout_alignParentBottom="true"
+
+                android:layout_alignTop="@+id/btnChangeImage"
+                android:layout_toLeftOf="@+id/btnChangeImage"
+                android:layout_toRightOf="@+id/btnPrevImage"
+                android:width="@android:dimen/app_icon_size"
+                android:background="?android:attr/colorBackground"
+                android:backgroundTint="@color/black_overlay"
+                android:gravity="center"
+                android:text="Page Number"
+                android:textColor="@android:color/holo_blue_bright"
+                android:textColorLink="@android:color/holo_blue_bright"
+                android:textStyle="normal|bold|italic"
+                android:typeface="serif"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/GotoPageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/sharebutton"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="26dp"
+                android:background="@layout/buttonshape2"
+                android:onClick="PageSelectionFunction"
+                android:shadowColor="#A86A99"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="5"
+                android:text="GOTO PAGE"
+                android:textColor="#75FFA8" />
+
+            <Button
+                android:id="@+id/sharebutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/btnChangeImage"
+                android:layout_alignLeft="@+id/GotoPageButton"
+                android:layout_alignStart="@+id/GotoPageButton"
+                android:layout_marginBottom="79dp"
+                android:background="@layout/buttonshape2"
+                android:onClick="shareAppFunction"
+                android:shadowColor="#A86A99"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="5"
+                android:text="SHARE THIS APP"
+                android:textColor="#75FFA8"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+    </FrameLayout>
+
+</FrameLayout>

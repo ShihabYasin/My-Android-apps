@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.shihab.tcpudptest1.MainActivity">
+
+    <Button
+        android:id="@+id/StartServer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:onClick="ServerStartActivity"
+        android:text="Start Server"
+        tools:layout_editor_absoluteX="7dp"
+        tools:layout_editor_absoluteY="7dp" />
+
+    <Button
+        android:id="@+id/StartClient"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="ClientStartActivity"
+        android:text="Start Client"
+        android:layout_marginTop="29dp"
+        android:layout_below="@+id/StartServer"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:text="Set Server Address"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/StartClient"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="23dp"
+        android:ems="10"
+        android:enabled="true"
+        android:inputType="textPersonName"
+        android:text="192.168.0.103"
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/SetServerAddressBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SET SERVER"
+        android:onClick="setGlobalServeraddress"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="21dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:text="Tcp Port"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/editText"
+        android:layout_toStartOf="@+id/editTextTcpPort" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Udp Port"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_alignTop="@+id/editTextUdpPort"
+        android:layout_alignStart="@+id/textView3" />
+
+    <EditText
+        android:id="@+id/editTextTcpPort"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="31055"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:layout_alignTop="@+id/textView3"
+        android:layout_alignStart="@+id/editText" />
+
+    <EditText
+        android:id="@+id/editTextUdpPort"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="32055"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textSize="18sp"
+        android:layout_marginTop="28dp"
+        android:layout_below="@+id/editTextTcpPort"
+        android:layout_alignStart="@+id/editTextTcpPort" />
+
+
+</RelativeLayout>
